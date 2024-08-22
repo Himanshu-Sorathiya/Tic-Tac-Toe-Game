@@ -8,6 +8,110 @@
     <title>Tic Tac Toe Game</title>
   </head>
   <body>
-    
+    <div class="wrapper">
+      <!-- Initial Screen: Player Selection -->
+      <div class="game__area game__area--initial">
+        <!-- Game Title -->
+        <div class="game__title">Tic Tac Toe</div>
+
+        <!-- Prompt for Player Selection -->
+        <div class="game__prompt">Select which you want to be?</div>
+
+        <!-- Option Buttons for Player Selection -->
+        <div class="game__options">
+          <button class="game__option game__option--x">Player (X)</button>
+          <button class="game__option game__option--o">Player (O)</button>
+        </div>
+      </div>
+
+      <!-- Gameplay Area -->
+      <div class="game__area game__area--play">
+        <!-- Turn Indicator -->
+        <div class="game__turn-indicator">
+          <span class="game__turn game__turn--x">X's Turn</span>
+          <span class="game__turn game__turn--o">O's Turn</span>
+        </div>
+
+        <!-- Game Board: 3x3 Grid -->
+        <div class="game__board">
+          <span class="game__cell">
+            <img
+              src="../assets/images/icon-x.svg"
+              class="game__icon"
+              alt="X Icon"
+            />
+          </span>
+          <span class="game__cell">
+            <img
+              src="../assets/images/icon-o.svg"
+              class="game__icon"
+              alt="O Icon"
+            />
+          </span>
+          <span class="game__cell">
+            <img
+              src="../assets/images/icon-x.svg"
+              class="game__icon"
+              alt="X Icon"
+            />
+          </span>
+          <span class="game__cell">
+            <img
+              src="../assets/images/icon-o.svg"
+              class="game__icon"
+              alt="O Icon"
+            />
+          </span>
+          <span class="game__cell">
+            <img
+              src="../assets/images/icon-x.svg"
+              class="game__icon"
+              alt="X Icon"
+            />
+          </span>
+          <span class="game__cell">
+            <img
+              src="../assets/images/icon-o.svg"
+              class="game__icon"
+              alt="O Icon"
+            />
+          </span>
+          <span class="game__cell">
+            <img
+              src="../assets/images/icon-x.svg"
+              class="game__icon"
+              alt="X Icon"
+            />
+          </span>
+          <span class="game__cell">
+            <img
+              src="../assets/images/icon-o.svg"
+              class="game__icon"
+              alt="O Icon"
+            />
+          </span>
+          <span class="game__cell">
+            <img
+              src="../assets/images/icon-x.svg"
+              class="game__icon"
+              alt="X Icon"
+            />
+          </span>
+        </div>
+      </div>
+
+      <!-- Game Result Screen -->
+      <div class="game__area game__area--result">
+        <!-- Result Message -->
+        <span class="game__result-message">
+          You won the game!
+        </span>
+
+        <!-- Replay Button -->
+        <div class="game__replay-btn--container">
+          <button class="game__replay-btn">Replay</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

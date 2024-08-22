@@ -1,3 +1,103 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* Container for the whole game */
+  .wrapper {
+    @apply flex h-screen w-screen items-center justify-center bg-sky-400 text-gray-800;
+    caret-color: transparent;
+  }
+
+  .hide {
+    @apply scale-0 opacity-0 transition-all duration-500;
+  }
+
+  /* Base styles for all game areas */
+  .game__area {
+    @apply rounded-md p-6;
+  }
+
+  /* Styles for the initial game area (where the user selects X or O) */
+  .game__area--initial {
+    @apply min-w-96 bg-white;
+  }
+
+  /* Title of the game */
+  .game__title {
+    @apply border-b pb-4 text-4xl font-semibold;
+  }
+
+  /* Prompt text asking the user to choose X or O */
+  .game__prompt {
+    @apply py-4 text-xl font-semibold;
+  }
+
+  /* Container for option buttons */
+  .game__options {
+    @apply flex gap-4;
+  }
+
+  /* Style for each option button (X or O) */
+  .game__option {
+    @apply flex-1 rounded-md bg-sky-400 py-2 text-xl font-medium text-white transition-transform duration-200 hover:scale-90;
+  }
+
+  /* Styles for the gameplay area */
+  .game__area--play {
+    @apply min-w-80 bg-sky-400;
+  }
+
+  /* Container for the turn indicator */
+  .game__turn-indicator {
+    @apply flex rounded-md bg-white p-2;
+  }
+
+  /* Style for each turn indicator */
+  .game__turn {
+    @apply flex-1 rounded-md bg-white py-3 text-center text-xl font-medium text-sky-400;
+  }
+
+  /* Style for the active turn indicator */
+  .active {
+    @apply bg-sky-400 text-white;
+  }
+
+  /* Grid layout for the game board */
+  .game__board {
+    @apply mt-6 grid grid-cols-3 grid-rows-3 gap-1 bg-sky-400;
+  }
+
+  /* Style for each cell in the game board */
+  .game__cell {
+    @apply flex items-center justify-center rounded-md bg-white;
+    /* Calculate cell width and height, accounting for gaps */
+    width: calc((20rem - 0.5rem) / 3);
+    height: calc((20rem - 0.5rem) / 3);
+  }
+
+  /* Style for the icons inside the cells */
+  .game__icon {
+    @apply h-12 w-12;
+  }
+
+  /* Styles for the result area (displayed after game ends) */
+  .game__area--result {
+    @apply min-w-96 bg-white;
+  }
+
+  /* Style for the result message */
+  .game__result-message {
+    @apply text-4xl font-semibold;
+  }
+
+  /* Container for the replay button */
+  .game__replay-btn--container {
+    @apply flex items-center justify-center;
+  }
+
+  /* Style for the replay button */
+  .game__replay-btn {
+    @apply mt-8 rounded-md bg-sky-400 px-4 py-2 text-center text-xl font-medium text-white transition-transform duration-200 hover:scale-90;
+  }
+}
